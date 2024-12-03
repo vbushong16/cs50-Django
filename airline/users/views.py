@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate, login,logout
 # Create your views here.
 def index(request):
     if not request.user.is_authenticated:
-        return HttpResponseRedirect(reverser("login"))
+        return HttpResponseRedirect(reverse("login"))
     return render(request,"users/user.html")
 
 def login_view(request):
